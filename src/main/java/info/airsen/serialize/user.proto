@@ -1,0 +1,17 @@
+option java_outer_classname = "UserOperation";
+
+option java_package = "info.airsen.serialize";
+
+option optimize_for = CODE_SIZE; //SPEED,LITE_RUNTIME
+
+message user {
+
+    required int64 id = 1;
+    required string name = 2;
+    required bool male = 3;
+    required string nickname = 4;
+    required string desc = 5;
+    required string homepage = 6;
+    required float price = 7;
+
+}
