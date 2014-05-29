@@ -182,18 +182,18 @@ public final class ProtoBufferPractice {
 			return PARSER.parseFrom(data);
 		}
 
-		/**
-		 * <code>required int64 id = 1;</code>
-		 */
-		public long getId() {
-			return id_;
-		}
-
 		public static ProtoBufferPractice.msgInfo parseFrom(
 				com.google.protobuf.ByteString data,
 				com.google.protobuf.ExtensionRegistryLite extensionRegistry)
 				throws com.google.protobuf.InvalidProtocolBufferException {
 			return PARSER.parseFrom(data, extensionRegistry);
+		}
+
+		/**
+		 * <code>required int64 id = 1;</code>
+		 */
+		public long getId() {
+			return id_;
 		}
 
 		public static ProtoBufferPractice.msgInfo parseFrom(byte[] data)
@@ -208,6 +208,18 @@ public final class ProtoBufferPractice {
 			return PARSER.parseFrom(data, extensionRegistry);
 		}
 
+		public static ProtoBufferPractice.msgInfo parseFrom(java.io.InputStream input)
+				throws java.io.IOException {
+			return PARSER.parseFrom(input);
+		}
+
+		public static ProtoBufferPractice.msgInfo parseFrom(
+				java.io.InputStream input,
+				com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+				throws java.io.IOException {
+			return PARSER.parseFrom(input, extensionRegistry);
+		}
+
 		/**
 		 * <code>required string des = 2;</code>
 		 */
@@ -215,9 +227,16 @@ public final class ProtoBufferPractice {
 			return ((bitField0_ & 0x00000002) == 0x00000002);
 		}
 
-		public static ProtoBufferPractice.msgInfo parseFrom(java.io.InputStream input)
+		public static ProtoBufferPractice.msgInfo parseDelimitedFrom(java.io.InputStream input)
 				throws java.io.IOException {
-			return PARSER.parseFrom(input);
+			return PARSER.parseDelimitedFrom(input);
+		}
+
+		public static ProtoBufferPractice.msgInfo parseDelimitedFrom(
+				java.io.InputStream input,
+				com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+				throws java.io.IOException {
+			return PARSER.parseDelimitedFrom(input, extensionRegistry);
 		}
 
 		/**
@@ -239,7 +258,13 @@ public final class ProtoBufferPractice {
 		}
 
 		public static ProtoBufferPractice.msgInfo parseFrom(
-				java.io.InputStream input,
+				com.google.protobuf.CodedInputStream input)
+				throws java.io.IOException {
+			return PARSER.parseFrom(input);
+		}
+
+		public static ProtoBufferPractice.msgInfo parseFrom(
+				com.google.protobuf.CodedInputStream input,
 				com.google.protobuf.ExtensionRegistryLite extensionRegistry)
 				throws java.io.IOException {
 			return PARSER.parseFrom(input, extensionRegistry);
@@ -260,31 +285,6 @@ public final class ProtoBufferPractice {
 			} else {
 				return (com.google.protobuf.ByteString) ref;
 			}
-		}
-
-		public static ProtoBufferPractice.msgInfo parseDelimitedFrom(java.io.InputStream input)
-				throws java.io.IOException {
-			return PARSER.parseDelimitedFrom(input);
-		}
-
-		public static ProtoBufferPractice.msgInfo parseDelimitedFrom(
-				java.io.InputStream input,
-				com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-				throws java.io.IOException {
-			return PARSER.parseDelimitedFrom(input, extensionRegistry);
-		}
-
-		public static ProtoBufferPractice.msgInfo parseFrom(
-				com.google.protobuf.CodedInputStream input)
-				throws java.io.IOException {
-			return PARSER.parseFrom(input);
-		}
-
-		public static ProtoBufferPractice.msgInfo parseFrom(
-				com.google.protobuf.CodedInputStream input,
-				com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-				throws java.io.IOException {
-			return PARSER.parseFrom(input, extensionRegistry);
 		}
 
 		public static Builder newBuilder() {
@@ -446,15 +446,15 @@ public final class ProtoBufferPractice {
 				return this;
 			}
 
-			public ProtoBufferPractice.msgInfo getDefaultInstanceForType() {
-				return ProtoBufferPractice.msgInfo.getDefaultInstance();
-			}
-
 			protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
 			internalGetFieldAccessorTable() {
 				return ProtoBufferPractice.internal_static_msgInfo_fieldAccessorTable
 						.ensureFieldAccessorsInitialized(
 								ProtoBufferPractice.msgInfo.class, ProtoBufferPractice.msgInfo.Builder.class);
+			}
+
+			public ProtoBufferPractice.msgInfo getDefaultInstanceForType() {
+				return ProtoBufferPractice.msgInfo.getDefaultInstance();
 			}
 
 			public com.google.protobuf.Descriptors.Descriptor
@@ -551,13 +551,6 @@ public final class ProtoBufferPractice {
 			}
 
 			/**
-			 * <code>required int64 id = 1;</code>
-			 */
-			public boolean hasId() {
-				return ((bitField0_ & 0x00000001) == 0x00000001);
-			}
-
-			/**
 			 * <code>required string des = 2;</code>
 			 */
 			public Builder clearDes() {
@@ -566,6 +559,14 @@ public final class ProtoBufferPractice {
 				onChanged();
 				return this;
 			}
+
+			/**
+			 * <code>required int64 id = 1;</code>
+			 */
+			public boolean hasId() {
+				return ((bitField0_ & 0x00000001) == 0x00000001);
+			}
+
 
 			/**
 			 * <code>required int64 id = 1;</code>
