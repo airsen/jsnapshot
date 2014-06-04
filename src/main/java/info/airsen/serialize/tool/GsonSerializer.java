@@ -1,4 +1,4 @@
-package info.airsen.serialize.json;
+package info.airsen.serialize.tool;
 
 
 import com.google.gson.*;

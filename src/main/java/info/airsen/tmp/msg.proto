@@ -1,7 +1,0 @@
-//option java_package = "Feinno.Practice.Learn";
-option java_outer_classname = "ProtoBufferPractice";
-
-message msgInfo {
-    required int64 id = 1;
-    required string des = 2;
-}
