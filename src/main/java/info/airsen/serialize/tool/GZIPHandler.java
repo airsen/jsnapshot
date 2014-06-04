@@ -19,8 +19,6 @@ public class GZIPHandler {
 		String fileName = sourceFileName.substring(0, sourceFileName.lastIndexOf('.')) + ".gzip";
 		File file = new File(fileName);
 		FileOutputStream out = new FileOutputStream(file);
-
-
 	}
 
 	private static String pure(Data data) {
