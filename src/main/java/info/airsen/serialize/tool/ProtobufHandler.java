@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.util.List;
 
 /**
- * <p>pb处理器</p>
+ * <p>pb 处理器</p>
  *
  * @author 主公 (jason61719@gmail.com)
  * @since 14-6-3 下午4:21
@@ -44,7 +44,7 @@ public class ProtobufHandler {
 		}
 		out.flush();
 		out.close();
-		System.out.println("protobuf 压缩文件大小:" + new File(fileName).length());
+		System.out.println("protobuf\t压缩文件大小:" + new File(fileName).length());
 
 	}
 

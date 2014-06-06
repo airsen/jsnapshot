@@ -1,6 +1,8 @@
 package info.airsen.serialize;
 
 import com.google.gson.reflect.TypeToken;
+import info.airsen.serialize.tool.CustomHandler;
+import info.airsen.serialize.tool.GZIPHandler;
 import info.airsen.serialize.tool.GsonSerializer;
 import info.airsen.serialize.tool.ProtobufHandler;
 
@@ -30,8 +32,10 @@ public class Compare {
 		while ((input = ctlReader.readLine()) != null) {
 			if (!input.equals(""))
 				tmpPath = input;
-			if (!new File(tmpPath).exists())
+			if (!new File(tmpPath).exists()) {
+				System.out.println("没有" + tmpPath + "这个路径…");
 				System.exit(1);
+			}
 
 			// 类型
 			System.out.print("输入要压缩的类型(0.all; 1.int; 2.float; 3.string):");
@@ -63,8 +67,10 @@ public class Compare {
 			System.out.println("从" + jsonFile.getPath() + " 中读取到共" + dataList.size() + "条记录");
 
 			// 压缩数据
-			System.out.println("json 原始文件大小:" + jsonFile.length());
+			System.out.println("json\t\t原始文件大小:" + jsonFile.length());
 			ProtobufHandler.deflate(jsonFileName, dataList);
+			GZIPHandler.deflate(jsonFileName, dataList);
+			CustomHandler.deflate(jsonFileName, dataList);
 
 			System.out.print(jsonFile.getPath() + " 压缩成功，继续请按回车:\n");
 		}

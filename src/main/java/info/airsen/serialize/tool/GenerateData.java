@@ -68,8 +68,8 @@ public class GenerateData {
 						data.setFloat2(random.nextFloat());
 						break;
 					case STRING:
-						data.setString1(getRandomeString(50));
-						data.setString1(getRandomeString(250));
+						data.setString1(getRandomeString(7500));
+						data.setString2(getRandomeString(2500));
 						break;
 					case ALL:
 					default:
@@ -79,8 +79,8 @@ public class GenerateData {
 						data.setInt2(random.nextInt());
 						data.setFloat1(random.nextFloat());
 						data.setFloat2(random.nextFloat());
-						data.setString1(getRandomeString(50));
-						data.setString1(getRandomeString(250));
+						data.setString1(getRandomeString(7500));
+						data.setString2(getRandomeString(2500));
 						break;
 				}
 				dataList.add(data);
